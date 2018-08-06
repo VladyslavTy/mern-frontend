@@ -4,10 +4,13 @@ import { Provider } from 'react-redux';
 import store from './store';
 import jwt_decode from 'jwt-decode';
 import {setCurrentUser} from "./actions/authActions";
-import setAuthToken from "./utils/setAuthToken";
+import setAuthToken from './utils/setAuthToken';
+
 
 import './App.css';
 
+import MeetupItem from './components/MeetupItem'
+import Meetups from './components/Meetups'
 import Navbar from './components/Navbar';
 import Main from './components/Main';
 import Register from './components/Register';
@@ -32,6 +35,8 @@ class App extends Component {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login} />
                     <Route exact path="/profile" component={Profile} />
+                    <Route exact path="/meetups" component={Meetups} />
+                    <Route exact path="/meetupitem" component={MeetupItem} />
                 </div>
             </div>
         </Router>

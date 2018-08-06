@@ -61,9 +61,11 @@ class Login extends Component {
                             <form onSubmit={this.onSubmit}>
                                 <div className="form-group">
                                     <input
+                                        className={'testEmail'}
                                         type="email"
-                                        className={classnames('form-control form-control-lg', {
+                                        className={ classnames('form-control form-control-lg', {
                                             'is-invalid': errors.email
+
                                         })}
                                         placeholder="Email Address"
                                         name="email"
@@ -76,6 +78,7 @@ class Login extends Component {
                                 </div>
                                 <div className="form-group">
                                     <input
+                                        id={'password'}
                                         type="password"
                                         className={classnames('form-control form-control-lg', {
                                             'is-invalid': errors.password
