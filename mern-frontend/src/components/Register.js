@@ -55,9 +55,10 @@ class Register extends Component {
                             <p className="lead text-center">
                                 Create your account
                             </p>
-                            <form noValidate onSubmit={this.onSubmit}>
+                            <form className='form-register' noValidate onSubmit={this.onSubmit}>
                                 <div className="form-group">
                                     <input
+                                        id='name'
                                         type="text"
                                         className={classnames('form-control form-control-lg', {
                                             'is-invalid': errors.name
@@ -137,4 +138,4 @@ const mapStateToProps = (state) => ({
     errors: state.errors
 });
 
-export default connect(mapStateToProps, { registerUser })(withRouter(Register));
+export default connect(mapStateToProps, { registerUser })(Register);

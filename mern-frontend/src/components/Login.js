@@ -61,7 +61,7 @@ class Login extends Component {
                             <form onSubmit={this.onSubmit}>
                                 <div className="form-group">
                                     <input
-                                        className={'testEmail'}
+                                        id={'testEmail'}
                                         type="email"
                                         className={ classnames('form-control form-control-lg', {
                                             'is-invalid': errors.email
